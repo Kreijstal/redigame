@@ -24,9 +24,14 @@ public class Main extends Application {
     private int y=0;
     private BooleanProperty rightPressed = new SimpleBooleanProperty();
     private BooleanProperty downPressed = new SimpleBooleanProperty();
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+
         Pane root = new Pane();
         primaryStage.setTitle("Hello World");
 
@@ -61,39 +66,31 @@ public class Main extends Application {
                 }
 
                 gc.clearRect(0, 0, 1200,575);
-                gc.setFill(Color.hsb(b++,1,1));
+                gc.setFill(Color.hsb(45,1,1));
                 gc.fillRect(x,y,100,100);
             }
         }.start();
         Scene scene=new Scene(root, 1200, 575);
         scene.addEventFilter(KeyEvent.KEY_PRESSED, e -> {
-           // if (e.getCode() == KeyCode.A) {
+            //This is executed everytime a key is pressed and every now and then while it is pressed
             if(e.getCode()==KeyCode.RIGHT){
                 rightPressed.setValue(true);
             }
             if(e.getCode()==KeyCode.DOWN){
                 downPressed.setValue(true);
             }
-           //     System.out.println(e.getCode()+" key was pressed");
-          //  }
         });
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
-
+//This is executed everytime a key is released
             if(e.getCode()==KeyCode.RIGHT){
                 rightPressed.setValue(false);
             }
             if(e.getCode()==KeyCode.DOWN){
                 downPressed.setValue(false);
             }
-            //     System.out.println(e.getCode()+" key was pressed");
-            //  }
+
         });
         primaryStage.setScene(scene);
         primaryStage.show();
-    }
-
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }
