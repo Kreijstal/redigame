@@ -34,8 +34,6 @@ public class Main extends Application {
 
         Pane root = new Pane();
         primaryStage.setTitle("Hello World");
-
-
         Canvas canvas = new Canvas(1200, 575);
         GraphicsContext gc = canvas.getGraphicsContext2D();
         /*Button btn = new Button();
@@ -56,6 +54,7 @@ public class Main extends Application {
 
         new AnimationTimer() {
             public void handle(long currentNanoTime) {
+                //Every animation frame
                 if (rightPressed.get()) {
                     x++;
                 }
@@ -79,7 +78,7 @@ public class Main extends Application {
             }
         });
         scene.addEventFilter(KeyEvent.KEY_RELEASED, e -> {
-//This is executed everytime a key is released
+            //This is executed everytime a key is released
             if (e.getCode() == KeyCode.RIGHT) {
                 rightPressed.setValue(false);
             }
