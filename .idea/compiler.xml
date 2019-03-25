@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="redigame" target="10" />
+      <module name="redigame" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
