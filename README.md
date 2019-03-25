@@ -10,4 +10,4 @@ Your tasks:
 - Add some image to the moving square
 - Rotate the square
 - The background is a bit boring, add something to it.
-- Chgange the square for a triangle
+- Change the square for a triangle
