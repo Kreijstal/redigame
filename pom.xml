@@ -24,7 +24,7 @@
     </dependency><dependency>
         <groupId>org.openjfx</groupId>
         <artifactId>javafx</artifactId>
-        <version>11</version>
+        <version>28-ea+7</version>
     </dependency></dependencies>
     <build>
         <plugins>
